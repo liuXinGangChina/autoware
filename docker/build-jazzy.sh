@@ -152,7 +152,7 @@ build_images() {
             --set "base-jazzy.tags=ghcr.io/autowarefoundation/autoware-base:jazzy-latest" \
             --set "base-jazzy-cuda.tags=ghcr.io/autowarefoundation/autoware-base:jazzy-cuda-latest"
     fi
-    
+
     # Build target images
     if [ "$option_no_cuda" = "true" ]; then
         docker buildx bake --load --progress=plain -f "$SCRIPT_DIR/docker-bake-jazzy.hcl" \
